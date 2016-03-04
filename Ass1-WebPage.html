@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Part 1, Assissment 1, Week 1  </title>
-  <meta name="author" content="Vitaliy">
+  <title> Part 1, Assissment's 1, Week 1  </title>
+  <meta name="author" content="Vitaliy" charset="utf-8">
   <!-- <style><link><script><base>-->
 </head>
-
 <body>
   <h1> Please Enter Detailes For Our Dating Website! </h1>
   <form>
     <fieldset>
       <legend>Your face</legend>
-      Your image: <input type="file" name="preview" required> <br>
-      Image preview <img src="preview" width="50%"> <br>
+      <label for="preview">Your image:</label>
+      <input type="file" id="preview" name="preview" required> <br>
+      Image preview: <br>
     </fieldset>
   </form>
   <br>
   <form>
     <fieldset>
       <legend>Your general details</legend>
-        Name: <input type="text" value="Your full name:" required> <br>
-        Gender: <input type="radio" name="gen" value="Male" required> Male
-                <input type="radio" name="gen" value="Female" required> Female <br>
-        Age: <input type="number" value="age" required> <br>
-        Date of birth: <input type="date" value="db"> <br>
-        Favorite color: <input type="color" value="color"> <br>
+        Name: <input type="text" placeholder="Your full name:" name="name" required> <br>
+        Gender: <input type="radio" name="gen" value="male" required> Male
+                <input type="radio" name="gen" value="female" required> Female <br>
+        Age: <input type="number" name="age" value="18" required> <br>
+        Date of birth: <input type="date" name="db"> <br>
+        Favorite color: <input type="color" name="color"> <br>
         Which country:  <select name="country">
                         <option value="None">no selection</option>
                         <option value="Narnia">Narnia</option>
@@ -45,9 +45,9 @@
   <form>
     <fieldset>
       <legend>Your Contact Information</legend>
-      Email: <input type="email" required> <br>
-      Mobile: <input type="tel"> <br>
-      Address: <input type="textarea" rows="3" cols="60" name="address"> <br>
+      Email: <input type="email" name="email" required> <br>
+      Mobile: <input type="tel" name="cell"> <br>
+      Address: <textarea rows="3" cols="20" name="address"> </textarea> <br>
       Method to contact you: <input type="checkbox" name="contact[]" value="car">Email
                              <input type="checkbox" name="contact[]" value="car">Whatsapp
                              <input type="checkbox" name="contact[]" value="car">In app chat
