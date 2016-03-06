@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Part 1, Assissment's 1, Week 1  </title>
-  <meta name="author" content="Vitaliy" charset="utf-8">
+  <title> Part 1, Assissment 1, Week 1  </title>
+  <meta name="author" content="Vitaliy">
   <!-- <style><link><script><base>-->
 </head>
+
 <body>
   <h1> Please Enter Detailes For Our Dating Website! </h1>
-  <form>
+  <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" accept-charset="UTF-8" 
+  enctype="multipart/form-data">
     <fieldset>
-      <legend>Your face</legend>
-      <label for="preview">Your image:</label>
-      <input type="file" id="preview" name="preview" required> <br>
-      Image preview: <br>
+		<legend>Your Face</legend>
+		<label for="preview">Your image:</label><input type="file" id="preview" name="preview" required> <br>
+		Image preview: <img src="preview" width="50%"> <br>
     </fieldset>
-  </form>
-  <br>
-  <form>
+    <br>
     <fieldset>
-      <legend>Your general details</legend>
-        Name: <input type="text" placeholder="Your full name:" name="name" required> <br>
-        Gender: <input type="radio" name="gen" value="male" required> Male
-                <input type="radio" name="gen" value="female" required> Female <br>
-        Age: <input type="number" name="age" value="18" required> <br>
-        Date of birth: <input type="date" name="db"> <br>
-        Favorite color: <input type="color" name="color"> <br>
-        Which country:  <select name="country">
-                        <option value="None">no selection</option>
-                        <option value="Narnia">Narnia</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="Mordor">Mordor</option>
-                        <option value="Oz">Oz</option>
-                        <option value="Gondor">Gondor</option>
-                      </select>
+		<legend>Your General Details</legend>
+		<label for="name">Name:</label><input type="text" name="name" id="name" placeholder="Your full name:" required> <br>
+        <label for="gen">Gender:</label><input type="radio" name="gen" id="gen" value="male" required> Male
+										<input type="radio" name="gen" id="gen" value="female" required> Female <br>
+        <label for="age">Age:</label><input type="number" name="age" id="age" value="18" required> <br>
+        <label for="dob">Date of birth:</label><input type="date" name="date" id="dob" value="db"> <br>
+        <label for="color">Favorite Color:</label><input type="color" name="color" id="color" value="color"> <br>
+        <label for="country">Which country:</label>
+			<select name="country" id="country">
+			<option value="None">no selection</option>
+			<option value="narnia">Narnia</option>
+			<option value="ukraine">Ukraine</option>
+			<option value="mordor">Mordor</option>
+			<option value="oz">Oz</option>
+			<option value="neverland">Neverland</option>
+			</select>
     </fieldset>
-  </form>
-  <form>
     <fieldset>
-      <legend>Your indicators</legend>
-      Height: Short <input type="range" min="0" max="100" step="5" value="50" name="height"> Tall <br>
-      Salary: Poor <input type="range" min="0" max="100" step="10" value="50" name="salary"> Rich
+      <legend>Your Indicators</legend>
+	  <label for="hei">Height:</label>
+      Short <input type="range" id="hei" name="height" min="0" max="100" step="5" value="50"> Tall <br>
+      <label for="sal">Salary:</label>
+	  Poor <input type="range" id="sal" name="salary" min="0" max="100" step="10" value="50"> Rich
     </fieldset>
-  </form>
-  <form>
     <fieldset>
       <legend>Your Contact Information</legend>
-      Email: <input type="email" name="email" required> <br>
-      Mobile: <input type="tel" name="cell"> <br>
-      Address: <textarea rows="3" cols="20" name="address"> </textarea> <br>
-      Method to contact you: <input type="checkbox" name="contact[]" value="car">Email
-                             <input type="checkbox" name="contact[]" value="car">Whatsapp
-                             <input type="checkbox" name="contact[]" value="car">In app chat
+	  <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required> <br>
+      <label for="cell">Mobile:</label>
+	  <input type="tel" name="cell" id="cell"> <br>
+      <label for="address">Address:</label>
+	  <textarea name="address" id="address"  rows="3" cols="25" name="address"> </textarea><br>
+      <label for="meth">Method to contact you:</label>
+	  <input id="meth" type="checkbox" name="contact[]" value="email">Email
+      <input id="meth" type="checkbox" name="contact[]" value="wapp">Whatsapp
+      <input id="meth" type="checkbox" name="contact[]" value="chat">In app chat
     </fieldset>
     <input type="submit" value="Submit">
   </form>
