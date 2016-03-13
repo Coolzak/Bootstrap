@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Part 2, Assissment 1, Week 1  </title>
+	<meta name="author" content="Vitaliy">
+	<style>
+		body {font-family:sans-serif}
+
+		fieldset {
+		background:lightyellow;
+		border:10px solid yellow;
+		margin-bottom:10px;
+		width:720px;
+		}
+
+		input:hover { font-size:120% }
+		label:hover { font-size:120% }
+
+		label {/*common label*/
+		width:180px;
+		display:inline-block;
+		text-align:right;
+		vertical-align:top;
+		}
+		.xlabel {width:auto; }
+		.minlabel {/*min value ofrange label*/
+			width:50px;
+			text-align:center;
+			vertical-align:top;
+			background:brown;
+			color:white;}
+
+		.maxlabel {/*max value ofrange label*/
+			width:50px;
+			text-align:center;
+			vertical-align:top;
+			background:purple;
+			color:white;}
+
+		.textarea {width:360px; height:50px;}
+	</style>
+</head>
+
+<body>
+  <h1> Please Enter Your Detailes For Our Dating Website! </h1>
+  <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+	method="get" accept-charset="UTF-8" enctype="multipart/form-data">
+  <!-- First set "Picture"-->
+    <fieldset>
+			<legend>Your Face</legend>
+			<label for="file">Your image:</label>
+			<input type="file" id="file" required> <br>
+			<label for="preview">Image preview:</label>
+			<img id="preview">
+    </fieldset>
+    <br>
+  <!-- Second set "General Details"-->
+    <fieldset>
+			<legend>Your General Details</legend>
+			<label for="name">Name:</label><input type="text" name="name" id="name"
+				placeholder="Your full name:" required><br>
+			<label for="gen">Gender:</label>
+				<input type="radio" name="gen" id="gen" value="male" required>
+					<label class="xlabel" for="gen">Maile</label>
+				<input type="radio" name="gen" id="gen" value="female" required>
+					<label class="xlabel" for="gen">Femaile</label><br>
+				<label for="age">Age:</label><input type="number" name="age" id="age" value="18" required> <br>
+        <label for="dob">Date of birth:</label><input type="date" name="date" id="dob" value="db"> <br>
+        <label for="color">Favorite Color:</label><input type="color" name="color" id="color" value="color"> <br>
+        <label for="country">Which country:</label>
+				<select name="country" id=="country">
+					<option value="None">no selection</option>
+					<option value="narnia">Narnia</option>
+					<option value="ukraine">Ukraine</option>
+					<option value="mordor">Mordor</option>
+					<option value="oz">Oz</option>
+					<option value="neverland">Neverland</option>
+				</select>
+    </fieldset>
+	<br>
+<!-- Theird set "Indicators"-->
+    <fieldset>
+	      <legend>Your Indicators</legend>
+			  <label for="hei">Height:</label>
+	      <label class="minlabel"> Short </label>
+				<input type="range" id="hei" name="height" min="0" max="100" step="5" value="50">
+				<label class="maxlabel"> Tall </label><br>
+	      <label for="sal">Salary:</label>
+			  <label class="minlabel"> Poor </label>
+				<input type="range" id="sal" name="salary" min="0" max="100" step="10" value="50">
+				<label class="maxlabel"> Rich </label>
+    </fieldset>
+	<br>
+<!-- Forth set "Contacts"-->
+    <fieldset>
+      <legend>Your Contact Information</legend>
+	  	<label for="email">Email:</label>
+      <input type="email" name="email" id="email" required> <br>
+      <label for="cell">Mobile:</label>
+	  	<input type="tel" name="cell" id="cell"> <br>
+      <label for="address">Address:</label>
+			<textarea class="textarea" name="address" id="address" rows="3" cols="25" name="address"></textarea><br>
+			<label for="meth">Method to contact you:</label>
+		  	<input id="meth" type="checkbox" name="contact[]" value="email"><label class="xlabel">Email</Label>
+	      <input id="meth" type="checkbox" name="contact[]" value="wapp"><label class="xlabel">Whatsapp</Label>
+	      <input id="meth" type="checkbox" name="contact[]" value="chat"><label class="xlabel">In app chat</Label>
+    </fieldset>
+    <input type="submit" value="Submit">
+  </form>
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
