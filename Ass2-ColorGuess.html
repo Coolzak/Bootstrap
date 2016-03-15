@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+      <title> Color Guessing Game </title>
+      <title> Assesment #2 , Week 2 </title>
+      <meta name="author" content="Vitaliy" charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var colors=["aqua", "yellow", "red", "black", "cyan", "orange",  "pink", "white" ];
+            var target_index;
+            var color, target, guess_input; 
+            var myBody=document.getElementsByTagName("body")[0]
+            colors.sort();
+            var count = 0;
+            flag = true;
+            
+            function do_game() {
+                target_index = Math.floor(Math.random () * colors.length);
+                target = colors[target_index];
+                alert ("Hint:\n has been thought: " + target + " color\n\n");
+                
+                while (flag) {
+                    guess_input = prompt ( "JavaScript\n\n" + "I am thiking of one of this colors:\n\n" + colors.join (", ") + "\n\n What color I am thinking of?\n\n");
+                    alert ( "You choose:\n\n " + guess_input + "\n\n");
+                    count++;
+                    check_guess();
+                    }
+            }
+            
+            function check_guess() {
+                if (colors.indexOf(guess_input) < 0) {
+                    alert ("Ups...\n\n Sorry, I don’t recognize that color!\n Please try again\n\n");
+                    }
+                    else if (colors.indexOf(guess_input) > target_index) {
+                        alert ("Sorry, your guess is not correct!\n\nHint: Your input is alphabetically higher than mine!\n\n");
+                       }
+                    else if (colors.indexOf(guess_input) < target_index) {
+                        alert ("Sorry, your guess is not correct!\n\nHint: Your input is alphabetically lower than mine!\n\n");
+                        }
+                    else {
+                        myBody.style.background = target;
+                        alert ("Congratulations! Youe have guess the color!\n\nIt tooks you " + count + " guess to finish the game!\n\nYou can see the color in the background\n\n" + myBody);
+                        flag = false;
+                    }
+            }
+            do_game();
+        </script>
+    </body>
+</html>
